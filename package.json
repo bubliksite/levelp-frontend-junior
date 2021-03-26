@@ -1,0 +1,17 @@
+{
+  "name": "levelp-frontend-junior",
+  "version": "0.0.1",
+  "description": "Front-end Junior Course. LevelUP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "frontend",
+    "javascript",
+    "html",
+    "css"
+  ],
+  "author": "Serge Moskalenko",
+  "license": "ISC"
+}
