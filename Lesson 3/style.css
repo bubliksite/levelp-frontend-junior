@@ -1,0 +1,54 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a.text-white {
+  color: #fff;
+}
+
+a.text-dark {
+  color: #212529;
+}
+
+.text-gray {
+  color: #6c757d;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+td {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+th,
+td {
+  border: 1px solid #fff;
+  width: 20%;
+  height: 150px;
+  max-height: 30%;
+  padding: 40px 15px;
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: color;
+}
+
+tfoot td {
+  padding: 15px;
+  border-color: #212529;
+  height: unset;
+}
+
+tfoot p {
+  margin: 10px 0;
+}
+
+tfoot img {
+  height: 40px;
+}
