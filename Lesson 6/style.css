@@ -1,20 +1,50 @@
+@font-face {
+  font-family: 'SF Pro';
+  src: url('./fonts/SF-Pro-Display-Regular.otf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'SF Pro';
+  src: url('./fonts/SF-Pro-Display-Medium.otf');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SF Pro';
+  src: url('./fonts/SF-Pro-Display-Semibold.otf');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'SF Pro';
+  src: url('./fonts/SF-Pro-Display-Bold.otf');
+  font-weight: 700;
+}
+
 body {
   margin: 0;
-  background-color: #aaa;
+  background-color: #f1f3f4;
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'SF Pro', sans-serif;
+  user-select: none;
 }
 #app {
   background-color: #fafafa;
-  width: 375px;
+  width: 420px;
+  max-height: 100%;
+  height: 812px;
+  overflow: scroll;
+  position: relative;
+}
+
+#app::-webkit-scrollbar {
+  display: none;
 }
 
 .container {
-  margin: 1rem 2rem;
+  margin: 0 1rem;
 }
 
 .header {
@@ -27,8 +57,10 @@ body {
   margin-left: 0.1rem;
 }
 
-.header .header__right_battery {
-  transform: rotate(90deg);
+.header__left p {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.7rem 0 0.7rem 0.5rem;
 }
 
 .account .account__header {
@@ -37,6 +69,216 @@ body {
   align-items: center;
 }
 
+.account .account__header_nav {
+  display: flex;
+  align-items: center;
+}
+
+.account__header h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0.9rem 0;
+}
+
 .account__header img {
-  margin-left: 1rem;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.account__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.account__info_image img {
+  border-radius: 50%;
+}
+
+.account__info_counters {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-left: 1.5rem;
+}
+
+.account__info_counters p {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 100%;
+  cursor: pointer;
+}
+
+.account__info_counters span {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.account__bio {
+  font-size: 0.9rem;
+}
+
+.account__bio-name {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.account__bio-bio {
+  margin: 0;
+}
+
+.account__bio-link {
+  color: #10467d;
+  text-decoration: none;
+}
+
+.account__buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.8rem 0;
+}
+
+.account__buttons button {
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  font-family: 'SF Pro', sans-serif;
+  outline: none;
+  cursor: pointer;
+}
+
+.button__follow,
+.button__message {
+  width: 45%;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+
+.button__message,
+.button__down {
+  border: 1px solid #dadada;
+  background-color: #fff;
+}
+
+.button__follow {
+  background-color: #3898f3;
+  border: 1px solid #3898f3;
+  color: #fff;
+}
+
+.button__message {
+  margin: 0 0.5rem;
+}
+
+.button__down {
+  width: 10%;
+}
+
+.stories {
+  margin: 0.8rem 0;
+  display: flex;
+}
+
+.stories .stories__single {
+  margin-right: 1.25rem;
+}
+
+.stories .stories__single-image {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  border: 1px solid #c7c7c7;
+  border-radius: 50%;
+}
+
+.stories .stories__single p {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.stories .stories__single img {
+  width: 100%;
+  height: 100%;
+}
+
+.feed__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feed__header_single {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 0.4rem;
+}
+
+.feed__header_single.active {
+  border-bottom: 0.12rem solid #000;
+}
+
+.feed__content {
+  margin-top: 2px;
+  display: grid;
+  grid-template-columns: repeat(3, calc(100% / 3));
+  gap: 0.15rem;
+}
+
+.feed__content_single img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  background-color: #fff;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #e4e4e4;
+  padding: 0.6rem 0;
+}
+
+.footer__nav {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.footer__nav_single {
+  cursor: pointer;
+}
+
+.footer__nav_avatar {
+  width: 24px;
+  border-radius: 50%;
+}
+
+.footer__nav_avatar-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #ed4956;
+  text-align: center;
+  margin: 0.3rem auto 0 auto;
+}
+
+.footer__home-indicator {
+  width: 135px;
+  height: 5px;
+  margin: 35px auto 0 auto;
+  border-radius: 100px;
+  background-color: #000;
+}
+
+@media (max-width: 420px) {
+  body {
+    align-items: unset;
+  }
 }
