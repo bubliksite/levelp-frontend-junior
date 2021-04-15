@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,700;1,800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -17,39 +17,161 @@
   </head>
   <body>
     <div id="app">
-      <div class="container">
-        <header class="header">
+      <header class="header">
+        <div class="container">
           <div class="header__left">
-            <p>9:41</p>
+            <p>09:41</p>
           </div>
           <div class="header__right">
             <img
               class="header__right_signal"
-              src="images/signal_cellular_alt_black_24dp.svg"
+              src="images/CellularConnection.svg"
               alt=""
             />
-            <img
-              class="header__right_wifi"
-              src="images/wifi_black_24dp.svg"
-              alt=""
-            />
+            <img class="header__right_wifi" src="images/Wifi.svg" alt="" />
             <img
               class="header__right_battery"
-              src="images/battery_full_black_24dp.svg"
+              src="images/Battery.svg"
               alt=""
             />
           </div>
-        </header>
-        <main class="account">
-          <div class="account__header">
-            <h3 class="account__header_name">sergeant.bublik</h3>
-            <div class="account__header_nav">
-              <img src="images/add_circle_outline_black_24dp.svg" alt="" />
-              <img src="images/menu_black_24dp.svg" alt="" />
+        </div>
+      </header>
+
+      <main class="content">
+        <div class="container">
+          <section class="account">
+            <div class="account__header">
+              <h3 class="account__header_name">sergeant.bublik</h3>
+              <div class="account__header_nav">
+                <img src="images/Union.svg" alt="" />
+                <img src="images/Menu.svg" alt="" />
+              </div>
+            </div>
+            <div class="account__info">
+              <div class="account__info_image">
+                <img src="images/Pic.png" alt="" />
+              </div>
+              <div class="account__info_counters">
+                <p>
+                  210 <br />
+                  <span>posts</span>
+                </p>
+                <p>
+                  600 <br />
+                  <span>followers</span>
+                </p>
+                <p>
+                  500 <br />
+                  <span>following</span>
+                </p>
+              </div>
+            </div>
+            <div class="account__bio">
+              <p class="account__bio-name">Piero Borgo</p>
+              <p class="account__bio-bio">
+                Product designer, founder of Leevia, Lego bricks lover.
+              </p>
+              <a href="//leevia.com" class="account__bio-link"> leevia.com </a>
+            </div>
+            <div class="account__buttons">
+              <button class="button__follow">Follow</button>
+              <button class="button__message">Message</button>
+              <button class="button__down">
+                <img src="images/chevron_down.svg" alt="" />
+              </button>
+            </div>
+          </section>
+          <section class="stories">
+            <div class="stories__single">
+              <div class="stories__single-image">
+                <img src="images/Image1.png" alt="" />
+              </div>
+              <p>Story 1</p>
+            </div>
+            <div class="stories__single">
+              <div class="stories__single-image">
+                <img src="images/Image2.png" alt="" />
+              </div>
+              <p>Story 2</p>
+            </div>
+            <div class="stories__single">
+              <div class="stories__single-image">
+                <img src="images/Image3.png" alt="" />
+              </div>
+              <p>Story 3</p>
+            </div>
+          </section>
+        </div>
+        <section class="feed">
+          <div class="feed__header">
+            <div class="feed__header_single active">
+              <img src="images/Grid.svg" alt="" />
+            </div>
+            <div class="feed__header_single">
+              <img src="images/Reel.svg" alt="" />
+            </div>
+            <div class="feed__header_single">
+              <img src="images/IGTV.svg" alt="" />
+            </div>
+            <div class="feed__header_single">
+              <img src="images/Tags.svg" alt="" />
             </div>
           </div>
-        </main>
-      </div>
+          <div class="feed__content">
+            <div class="feed__content_single">
+              <img src="images/Rectangle%2036.png" alt="" />
+            </div>
+            <div class="feed__content_single">
+              <img src="images/Rectangle%2037.png" alt="" />
+            </div>
+            <div class="feed__content_single">
+              <img src="images/Rectangle%2038.png" alt="" />
+            </div>
+            <div class="feed__content_single">
+              <img src="images/Rectangle%2039.png" alt="" />
+            </div>
+            <div class="feed__content_single">
+              <img src="images/Rectangle%2040.png" alt="" />
+            </div>
+            <div class="feed__content_single">
+              <img src="images/Rectangle%2041.png" alt="" />
+            </div>
+            <div class="feed__content_single">
+              <img src="images/Rectangle%2042.png" alt="" />
+            </div>
+            <div class="feed__content_single">
+              <img src="images/Rectangle%2043.png" alt="" />
+            </div>
+            <div class="feed__content_single">
+              <img src="images/Rectangle%2044.png" alt="" />
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__nav">
+            <div class="footer__nav_single">
+              <img src="images/Home.svg" alt="" />
+            </div>
+            <div class="footer__nav_single">
+              <img src="images/Lens.svg" alt="" />
+            </div>
+            <div class="footer__nav_single">
+              <img src="images/Reel_black.svg" alt="" />
+            </div>
+            <div class="footer__nav_single">
+              <img src="images/Shop.svg" alt="" />
+            </div>
+            <div class="footer__nav_single">
+              <img class="footer__nav_avatar" src="images/Pic.png" alt="" />
+              <div class="footer__nav_avatar-dot"></div>
+            </div>
+          </div>
+          <!--          <div class="footer__home-indicator"></div>-->
+        </div>
+      </footer>
     </div>
   </body>
 </html>
