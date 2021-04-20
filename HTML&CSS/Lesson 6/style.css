@@ -1,21 +1,21 @@
 @font-face {
   font-family: 'SF Pro';
-  src: url('./fonts/SF-Pro-Display-Regular.otf');
+  src: url('HTML&CSS/Lesson 6/fonts/SF-Pro-Display-Regular.otf');
   font-weight: 400;
 }
 @font-face {
   font-family: 'SF Pro';
-  src: url('./fonts/SF-Pro-Display-Medium.otf');
+  src: url('HTML&CSS/Lesson 6/fonts/SF-Pro-Display-Medium.otf');
   font-weight: 500;
 }
 @font-face {
   font-family: 'SF Pro';
-  src: url('./fonts/SF-Pro-Display-Semibold.otf');
+  src: url('HTML&CSS/Lesson 6/fonts/SF-Pro-Display-Semibold.otf');
   font-weight: 600;
 }
 @font-face {
   font-family: 'SF Pro';
-  src: url('./fonts/SF-Pro-Display-Bold.otf');
+  src: url('HTML&CSS/Lesson 6/fonts/SF-Pro-Display-Bold.otf');
   font-weight: 700;
 }
 
