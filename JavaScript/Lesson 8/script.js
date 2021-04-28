@@ -40,7 +40,7 @@ let имяПользователя = '...'
 let 我 = '...'
 
 //4) Выведите в консоли слово "Hello world"
-console.warn('Hello World')
+console.warn('Hello World').   // Оригинально ))   Показываешь предупреждение
 
 //5) 5==2 && 4>2  -   каким будет ответ?
 console.log(5 === 2 && 4 > 2) //false
