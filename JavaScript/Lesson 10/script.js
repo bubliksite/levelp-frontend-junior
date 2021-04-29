@@ -23,7 +23,7 @@ let user = {
   lastname: 'Jillinghall',
   age: 40,
   isAlive: true,
-  fullname: function () {
+  fullname() {
     return `${this.name} ${this.lastname}`
   }
 }
