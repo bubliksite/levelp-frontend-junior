@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Counter</title>
+    <title>lesson 31</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,86 +17,91 @@
   </head>
   <body>
     <div id="app">
-      <div class="block">
-        <div>
-          <h3>Counter:</h3>
-          <div class="d-flex justify-content-around align-items-center">
-            <button class="btn btn-primary" @click="counter--">-</button>
-            <h3 class="my-0 mx-3">{{counter}}</h3>
-            <button class="btn btn-primary" @click="counter++">+</button>
+      <div class="container">
+        <div class="block">
+          <div>
+            <h3>Counter:</h3>
+            <div class="d-flex justify-content-around align-items-center">
+              <button class="btn btn-primary" @click="counter--">-</button>
+              <h3 class="my-0 mx-3">{{counter}}</h3>
+              <button class="btn btn-primary" @click="counter++">+</button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="block">
-        <div>
-          <div class="d-flex mb-3">
-            <input
-              class="form-control"
-              type="text"
-              placeholder="Input text here"
-              :value="inputValue"
-              v-model="inputValue"
-            />
-          </div>
-          <p
-            style="
-              border-bottom: 1px solid #ddd;
-              min-height: 25px;
-              align-self: baseline;
-              overflow: hidden;
-            "
-          >
-            {{inputValue}}
-          </p>
-        </div>
-      </div>
-      <div class="block">
-        <ul class="list-group mx-3">
-          <li
-            class="list-group-item list-group-item-info"
-            v-for="item in items"
-          >
-            {{item}}
-          </li>
-        </ul>
-        <ul class="list-group mx-3">
-          <li
-            class="list-group-item list-group-item-secondary"
-            v-for="(value, key) in object"
-          >
-            {{key}} : {{value}}
-          </li>
-        </ul>
-      </div>
-      <div class="block">
-        <div>
-          <form @submit.prevent="addItemInArray" class="mb-3 d-flex">
-            <input class="form-control" type="text" v-model="inputInArray" />
-            <button class="btn btn-primary" @submit="addItemInArray">
-              Push
-            </button>
-          </form>
-          <ul class="list-group">
-            <li
-              class="list-group-item d-flex justify-content-between align-items-center"
-              v-for="(item, index) in array"
+        <div class="block">
+          <div>
+            <div class="d-flex mb-3">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Input text here"
+                :value="inputValue"
+                v-model="inputValue"
+              />
+            </div>
+            <p
+              style="
+                border-bottom: 1px solid #ddd;
+                min-height: 25px;
+                align-self: baseline;
+                overflow: hidden;
+              "
             >
-              {{index}} - {{item}}
-              <button class="btn btn-danger" @click="deleteItemInArray(index)">
-                <i class="bi-trash" size="20"></i>
-              </button>
+              {{inputValue}}
+            </p>
+          </div>
+        </div>
+        <div class="block">
+          <ul class="list-group mx-3">
+            <li
+              class="list-group-item list-group-item-info"
+              v-for="item in items"
+            >
+              {{item}}
+            </li>
+          </ul>
+          <ul class="list-group mx-3">
+            <li
+              class="list-group-item list-group-item-secondary"
+              v-for="(value, key) in object"
+            >
+              {{key}} : {{value}}
             </li>
           </ul>
         </div>
-      </div>
-      <div class="block">
-        <p
-          class="list-group-item list-group-item-warning"
-          style="cursor: not-allowed"
-          @mouseover="changeColor"
-        >
-          Name
-        </p>
+        <div class="block">
+          <div>
+            <form @submit.prevent="addItemInArray" class="mb-3 d-flex">
+              <input class="form-control" type="text" v-model="inputInArray" />
+              <button class="btn btn-primary" @submit="addItemInArray">
+                Push
+              </button>
+            </form>
+            <ul class="list-group">
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center"
+                v-for="(item, index) in array"
+              >
+                {{index}} - {{item}}
+                <button
+                  class="btn btn-danger"
+                  @click="deleteItemInArray(index)"
+                >
+                  <i class="bi-trash" size="20"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="block">
+          <p
+            class="list-group-item list-group-item-warning"
+            style="cursor: not-allowed"
+            @mouseover="changeColor"
+          >
+            Name
+          </p>
+        </div>
       </div>
     </div>
     <script src="https://unpkg.com/vue@next"></script>
