@@ -1,15 +1,18 @@
 const App = {
-  beforeCreate() {
-    console.log('beforeCreate ' + Date.now())
-  },
-  created() {
-    console.log('created ' + Date.now())
-  },
-  beforeMount() {
-    console.log('beforeMount ' + Date.now())
-  },
-  mounted() {
-    console.log('mounted ' + Date.now())
-  }
+    data() {
+        return {
+            value: '',
+            items: []
+        }
+    },
+    methods: {
+        addItem() {
+            this.items.push(this.value)
+            this.value = ''
+        },
+        removeItem(index) {
+            this.items.splice(index, 1)
+        }
+    }
 }
 Vue.createApp(App).mount('#app')

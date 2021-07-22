@@ -15,8 +15,32 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div id="app"></div>
+  <body class="bg-secondary">
+    <div id="app">
+      <div class="container my-5">
+        <div class="card">
+          <div class="container">
+            <h1 class="text-body my-3">Список заметок</h1>
+            <form @submit.prevent="addItem" class="d-flex w-100 mb-4">
+              <input v-model="value" class="form-control me-3"/>
+              <button class="btn btn-success">Add</button>
+            </form>
+
+            <hr class="mb-4">
+            <ul class="list-group mb-5">
+              <li v-for="(item, index) in items"
+                  :key="index"
+                  class="list-group-item d-flex align-items-center justify-content-between"
+                  :class="item.length > 5 ? 'list-group-item-success fw-bold' : 'list-group-item-info'">
+                <span class="text-uppercase">{{item}}</span>
+                <button class="btn btn-danger" @click="removeItem(index)"><i class="bi-trash" size="20"></i></button>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
     <script src="https://unpkg.com/vue@next"></script>
     <script src="script.js"></script>
   </body>
